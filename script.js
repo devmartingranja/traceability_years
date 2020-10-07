@@ -2,20 +2,20 @@
 let btnGenerar = document.getElementById('btnGenerar');
 let inpAnioInicio = document.getElementById('inpAnioInicio');
 let inpAnioFin = document.getElementById('inpAnioFin');
-import {calcularTrayectoria} from './operations.js'
+import { calcularTrayectoria } from './operations.js'
 
 
 btnGenerar.addEventListener('click', () => {
 
     let valAnioInicio = parseInt(inpAnioInicio.value)
-    let valAnioFin = parseInt(inpAnioFin.value)
-    generarGrafica(valAnioInicio || 0,valAnioFin || 0);
-    
+    let valAnioFin = valAnioInicio + parseInt(inpAnioFin.value)
+    generarGrafica(valAnioInicio || 0, valAnioFin || 0);
+
 })
 
-function generarGrafica(anioInicio = 1990, anioFin = 2050){
+function generarGrafica(anioInicio = 2000, anioFin = 2050) {
 
-    let data = calcularTrayectoria(anioInicio,anioFin)   
+    let data = calcularTrayectoria(anioInicio, anioFin)
 
     Highcharts.chart('container', {
         chart: {
@@ -40,7 +40,7 @@ function generarGrafica(anioInicio = 1990, anioFin = 2050){
             maxZoom: 0,
             title: {
                 text: 'Años'
-            }            
+            }
         },
         yAxis: {
             title: {
@@ -53,7 +53,7 @@ function generarGrafica(anioInicio = 1990, anioFin = 2050){
                 value: 0,
                 width: 1,
                 color: '#808080'
-            }]           
+            }]
         },
         legend: {
             enabled: true
@@ -63,7 +63,7 @@ function generarGrafica(anioInicio = 1990, anioFin = 2050){
         },
         plotOptions: {
             series: {
-                lineWidth: 1          
+                lineWidth: 1
             }
         },
         tooltip: {
