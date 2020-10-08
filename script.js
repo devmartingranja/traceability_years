@@ -23,10 +23,10 @@ function generarGrafica(anioInicio = 2000, anioFin = 2050) {
             margin: [70, 50, 100, 80]
         },
         title: {
-            text: 'Herramienta para la trasabilidada en años'
+            text: 'Trazabilidad vida útil de la Edificación'
         },
         subtitle: {
-            text: 'Click en "Generar"'
+            text: 'Trabajo Final de Master (TFM)'
         },
         accessibility: {
             announceNewData: {
@@ -39,12 +39,12 @@ function generarGrafica(anioInicio = 2000, anioFin = 2050) {
             maxPadding: 0.2,
             maxZoom: 0,
             title: {
-                text: 'Años'
+                text: 'Vida Útil Estimada en Años'
             }
         },
         yAxis: {
             title: {
-                text: 'porcentaje'
+                text: 'Estado de Prestación'
             },
             minPadding: 0.2,
             maxPadding: 0.2,
@@ -71,7 +71,7 @@ function generarGrafica(anioInicio = 2000, anioFin = 2050) {
             pointFormat: 'Año {point.x} -> {point.y} %'
         },
         series: [{
-            name: 'Trayectoria',
+            name: 'Duración del Elemento',
             data
         }]
     });
