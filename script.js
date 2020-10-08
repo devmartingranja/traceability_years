@@ -6,11 +6,9 @@ import { calcularTrayectoria } from './operations.js'
 
 
 btnGenerar.addEventListener('click', () => {
-
     let valAnioInicio = parseInt(inpAnioInicio.value)
     let valAnioFin = valAnioInicio + parseInt(inpAnioFin.value)
     generarGrafica(valAnioInicio || 0, valAnioFin || 0);
-
 })
 
 function generarGrafica(anioInicio = 2000, anioFin = 2050) {
@@ -75,7 +73,6 @@ function generarGrafica(anioInicio = 2000, anioFin = 2050) {
             data
         }]
     });
-
 }
 generarGrafica();
 
